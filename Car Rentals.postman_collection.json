@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "790230dd-df12-45a3-8c2e-d2c511fbd5ef",
+		"name": "Car Rentals",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"phani\",\n    \"last_name\": \"kumar\",\n    \"email\": \"phankumar@gmail.com\",\n    \"mobile\": \"9010199290\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4444/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"phanikumar@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4444/user?userId=1000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4444/user?userId=1000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4444/user?userId=1000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"car_license_number\": \"AP26\",\n    \"manufacturer\": \"HYUNDAI\",\n    \"model\": \"Verna\",\n    \"base_price\": 200,\n    \"price_per_hour\": 100,\n    \"security_deposit\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4444/car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Car",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"manufacturer\": \"HYUNDAIV1\",\n    \"model\": \"Vernav1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4444/car?carId=1000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"car"
+					],
+					"query": [
+						{
+							"key": "carId",
+							"value": "1000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4444/car?carId=1000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"car"
+					],
+					"query": [
+						{
+							"key": "carId",
+							"value": "1000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4444/car?carId=1000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"car"
+					],
+					"query": [
+						{
+							"key": "carId",
+							"value": "1000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search Cars",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from_time\" : \"2021-05-18T18:00:00.000Z\",\n    \"to_time\": \"2021-05-18T19:30:00.000Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4444/search-cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"search-cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calculate price",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from_time\" : \"2021-05-17T19:00:00.000Z\",\n    \"to_time\": \"2021-05-17T21:30:00.000Z\",\n    \"car_id\": 1000000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4444/calculate-price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"calculate-price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4444/user/bookings?userId=1000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"user",
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "car Bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4444/car/bookings?carId=1000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"car",
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "carId",
+							"value": "1000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from_time\": \"2021-05-18T19:00:00.000Z\",\n    \"to_time\": \"2021-05-18T21:30:00.000Z\",\n    \"car_id\": 1000000,\n    \"price\": 550\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4444/car/book?userId=1000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"car",
+						"book"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1000000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
