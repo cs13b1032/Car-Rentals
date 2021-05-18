@@ -1,6 +1,7 @@
 
 # Install node, npm, psql
 
+# create database named car_rentals
 # start sql server on port 5432 (default sql port)
 
 Run the following commands
